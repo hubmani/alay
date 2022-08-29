@@ -1,0 +1,4 @@
+name: alist
+deploy:
+  compose:
+    file: docker-compose.yaml
