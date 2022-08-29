@@ -1,0 +1,17 @@
+version: "2.4"
+services:
+  alay:
+    build: .
+    container_name: alay
+    restart: always
+    ports:
+     - "5244:5244"
+    volumes:
+     - alist-storage:/opt/alist/data
+    environment:
+      - DB_TYPE=mysql
+      - CACHE_EXPIRATION=60
+      - CACHE_CLEANUP_INTERVAL=120
+
+volumes:
+  alist-storage:
